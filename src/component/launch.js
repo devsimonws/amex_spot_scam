@@ -1,5 +1,5 @@
 import React from "react";
-import Wrapper from "../wrapper/wrapper";
+import Wrapper from "./wrapper/wrapper";
 
 import styles from "./launch.module.scss";
 
@@ -9,7 +9,7 @@ const Launch = (props) => {
     <Wrapper>
       <img 
         id={styles.logo}
-        src={require('../../asset/image/AMEX_logo-114.png')} 
+        src={require('../asset/image/AMEX_logo-114.png')} 
         alt="AMEX logo" />
       <h1 id={styles['title']}>
         <span id={styles['title1']}>SPOT</span><br/>
