@@ -1,5 +1,6 @@
 import React from "react";
 import Wrapper from "./wrapper/wrapper";
+import Button  from "./button/button";
 
 import styles from "./launch.module.scss";
 
@@ -8,18 +9,18 @@ const Launch = (props) => {
   return (
     <Wrapper>
       <img 
-        id={styles.logo}
+        className={styles.logo}
         src={require('../asset/image/AMEX_logo-114.png')} 
         alt="AMEX logo" />
-      <h1 id={styles['title']}>
-        <span id={styles['title1']}>SPOT</span><br/>
-        <span id={styles['title2']}>THE SCAM</span>
+      <h1 className={styles['title']}>
+        <span className={styles['title1']}>SPOT</span><br/>
+        <span className={styles['title2']}>THE SCAM</span>
       </h1>
-      <h2 id={styles['sub-title']}>
+      <h2 className={styles['sub-title']}>
         Protect yourself from <br/>
         phishing scams
         </h2>
-      <div id={styles['desc']}>
+      <div className={styles['desc']}>
         <p>
           Want to know how to spot a scam <br/>
           and keep your Account safe?
@@ -30,8 +31,10 @@ const Launch = (props) => {
           help you stay one step ahead.
         </p>
       </div>
-      <a className="button">Start Spotting</a>
-      <a>More about phishing</a>
+      <div className={styles['button']}>
+        <Button>Start Spotting</Button>
+      </div>
+      <a className={styles['link']}>More about phishing</a>
     </Wrapper>
   )
 };
