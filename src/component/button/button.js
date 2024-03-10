@@ -1,12 +1,14 @@
-import React from "react";
-import styles from "./button.module.scss"
+import React, { useContext } from "react";
+import { ProcessCtx } from "../app";
+import styles from "./button.module.scss";
 
 const Button = (props) => {
+  const clickHandler = useContext(ProcessCtx);
   return (
     <a 
       style={props.s}
       className={styles['button']} 
-      onClick={props.clickHandler}>
+      onClick={clickHandler}>
         {props.children}
     </a>
   )
